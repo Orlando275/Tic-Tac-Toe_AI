@@ -2,6 +2,7 @@ import json
 import os
 import copy
 from utils import paths
+
 class GameLogic:
     def __init__(self):
         self.history = []
