@@ -1,8 +1,10 @@
 import torch
 from torch.utils.data import TensorDataset,DataLoader
+from utils import paths
 
 def load_dataset_TicTacToe():
-    data=torch.load("/home/orlandoflorescastillo/Documentos/gatoIA/data/tictactoe_dataset.pt")
+    path_dataset=paths.get_dataset_path()
+    data=torch.load(path_dataset)
     boards=data["boards"]
     moves=data["moves"]
     

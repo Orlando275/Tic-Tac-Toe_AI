@@ -1,7 +1,9 @@
 import tkinter as tk
 import torch
+from utils import paths
 from game.logic import GameLogic
 from model.model import modelGame
+
 class TrainGame:
     def __init__(self):
         
@@ -19,16 +21,16 @@ class TrainGame:
         self.canvas = tk.Canvas(self.window, width=600, height=600, bg="white")
         self.canvas.pack(padx=30, pady=50)
 
+        #enable buttons
         self.canvas.bind("<Button-1>", self.click_box)
         self.window.bind("<g>", self.reset_game)
         self.window.bind("<G>", self.reset_game)
-
-        self.window.bind("<A>",self.gameStart)
-        self.window.bind("<a>",self.gameStart)
+        self.window.bind("<A>",self.gameStartAI)
+        self.window.bind("<a>",self.gameStartAI)
         
         self.draw_board()
 
-    def gameStart(self,event=None):
+    def gameStartAI(self,event=None):
         self.game_IA=True
         self.symbol_to_number={
             "":0,
@@ -36,9 +38,12 @@ class TrainGame:
             "O":-1
         }
 
+        #get relative path
+        self.path_model=paths.get_model_path()
 
+        #load model from file
         self.model=modelGame()
-        self.model.load_state_dict(torch.load("/home/orlandoflorescastillo/Documentos/gatoIA/model/model_TicTacToe.pth"))
+        self.model.load_state_dict(torch.load(self.path_model))
         self.model.eval()
 
         self.label_instructions.config(text="You are playing with AI", font=("Arial", 20), bg="white")
@@ -59,8 +64,8 @@ class TrainGame:
         self.label_instructions.config(text="Select the box and press or press 'a' for playing with AI")
 
         self.canvas.bind("<Button-1>", self.click_box)
-        self.window.bind("<A>",self.gameStart)
-        self.window.bind("<a>",self.gameStart)
+        self.window.bind("<A>",self.gameStartAI)
+        self.window.bind("<a>",self.gameStartAI)
 
     def click_box(self, event):
         self.canvas.unbind("<A>")
@@ -117,6 +122,8 @@ class TrainGame:
             self.label_turn.config(text=f"{next_symbol} goes now")
 
     def board_to_tensor(self):
+        
+        #transform board to tensor in view (N,9)
         board=self.logic.board
         board_tensor=torch.tensor([[self.symbol_to_number[cell]for cell in row]for row in board], dtype=torch.float32)
         board_tensor=board_tensor.view(1,-1)

@@ -1,7 +1,7 @@
 import json
 import os
 import copy
-
+from utils import paths
 class GameLogic:
     def __init__(self):
         self.history = []
@@ -54,12 +54,15 @@ class GameLogic:
 
 
     def save_game(self, result):
+
         game_data = {
             "moves": self.history,
             "result": result
         }
-
-        filename = "/home/orlandoflorescastillo/Documentos/gatoIA/data/data_train.json"
+        
+        #load path to file json
+        path_fileJSON=paths.get_trainJSON_path()
+        filename = path_fileJSON
 
         if os.path.exists(filename):
             with open(filename, "r") as f:

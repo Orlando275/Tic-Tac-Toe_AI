@@ -1,4 +1,4 @@
-#!/home/orlandoflorescastillo/Documentos/gatoIA/entorno/bin/python3
+#!/home/orlandoflorescastillo/Documentos/gatoIA/venv-python/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
