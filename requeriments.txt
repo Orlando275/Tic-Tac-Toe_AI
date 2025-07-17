@@ -1,0 +1,126 @@
+customtkinter
+ia-gato/
+│
+├── Dockerfile
+├── requirements.txt
+├── README.md
+│
+├── game/
+│   ├── play.py        # juego interactivo
+│   └── logic.py       # lógica del gato
+│
+├── model/
+│   ├── network.py     # tu red neuronal en PyTorch
+│   └── train.py       # entrenamiento del modelo
+│
+├── cuda/
+│   └── custom_kernels.cu  # si haces tus kernels personalizados
+│
+└── data/
+    └── dataset.csv    # tus datos generados al jugar
+
+Perfecto, bro. Gracias por aclararlo.
+
+### Como quieres **internships en NVIDIA, Meta y Microsoft**, el enfoque cambia un poco — pero sigue siendo **estratégico**.
+
+---
+
+## 🎯 ¿Qué buscan las big techs en un *intern*?
+
+Aunque no esperen que seas senior, sí buscan que tengas:
+
+| Área                        | ¿Por qué es clave para un intern?                       | ¿Ejemplo de cómo mostrarlo?                       |
+| --------------------------- | ------------------------------------------------------- | ------------------------------------------------- |
+| 🧠 Lógica y fundamentos     | Porque te van a entrenar, pero no desde cero            | LeetCode / CS fundamentals (Big-O, arrays, DP…)   |
+| 🛠️ Proyectos técnicos      | Demostrar iniciativa y capacidad de construir algo real | IA + kernels CUDA / API / juegos inteligentes     |
+| 🔌 Capacidad de integrarte  | No solo entrenar modelos, sino construir software útil  | Una API que use IA, código limpio y comentado     |
+| 📈 Potencial de crecimiento | Que tengas dirección clara y pasión                     | Mostrar en tu CV/GitHub tu ruta clara a deep tech |
+
+---
+
+## 💡 Ahora sí: ¿Qué debes priorizar este mes?
+
+### ✅ Tu objetivo no es ser experto aún,
+
+sino demostrar que tienes **fuerte potencial técnico**
+y que **estás aprendiendo lo correcto**.
+
+---
+
+## 🧭 Plan adaptado para **internships en NVIDIA / Meta / Microsoft**
+
+### ✅ **Enfócate solo en estas 3 cosas bien hechas (por orden de importancia):**
+
+---
+
+### 1. 🧠 **Proyecto de IA con tu propio dataset de Tic-Tac-Toe**
+
+**Meta & NVIDIA lo valoran mucho** si:
+
+* Entrenas el modelo
+* Guardas los datos reales
+* Y reemplazas alguna parte con **un kernel CUDA** básico (aunque sea una suma)
+
+#### Qué mostrar:
+
+* Explicación del dataset (`.json` + `.pt`)
+* Cómo entrenas el modelo
+* Cómo usas CUDA (aunque sea `cupy` o `torch.cuda`)
+* Cómo hacer predicciones
+
+🔧 **Extra pro**: Guarda las partidas, visualiza resultados y explica errores comunes del modelo.
+
+---
+
+### 2. 📊 **LeetCode diario (mínimo 1-2 problemas bien pensados)**
+
+> Esto es clave para entrevistas técnicas, incluso para interns.
+
+#### Enfócate en:
+
+* Arrays, HashMap, Two Pointers
+* Recursion, DFS/BFS
+* Dynamic Programming (aunque sea lo básico)
+* Sorting + Greedy
+
+🔧 **Consejo**: Deja un archivo `.md` en GitHub con tus soluciones bien explicadas → eso impacta.
+
+---
+
+### 3. 🌐 **Pequeña API con tu modelo (opcional, si hay tiempo)**
+
+> Esto muestra que **sabes usar tu modelo en una app real**. Microsoft y Meta lo valoran.
+
+#### Ejemplo mínimo:
+
+* `POST /predict` con un board 3x3
+* Devuelve la predicción del modelo
+* Puede estar en FastAPI o Flask
+
+🔧 Si no tienes tiempo para hostear, ¡no pasa nada! Que funcione localmente y tenga instrucciones.
+
+---
+
+## 🚀 ¿Qué hacer en los próximos 18 días?
+
+Te propongo esta tabla de enfoque:
+
+| Semana         | Actividad principal                                      | Horas sugeridas |
+| -------------- | -------------------------------------------------------- | --------------- |
+| 1 (hoy–día 14) | Terminar **entrenamiento del modelo + guardar partidas** | 2h/día          |
+| 2 (día 15–21)  | Agregar **kernel CUDA simple** + hacer pruebas           | 2h/día          |
+| 3 (día 22–28)  | Subir a GitHub, limpiar código, escribir README          | 2h/día          |
+| Diario         | Resolver 1–2 problemas LeetCode                          | 1–1.5h/día      |
+| Opcional       | Crear API mínima                                         | Últimos 4 días  |
+
+---
+
+## 🧠 En resumen:
+
+* **Tu proyecto IA con CUDA es lo más valioso** para NVIDIA
+* **Tu LeetCode es lo más importante** para entrevistas técnicas (Meta y Microsoft también)
+* **La API es extra, pero útil si tienes tiempo**
+
+---
+
+¿Quieres que mañana comencemos con el plan concreto para la fase 1: entrenamiento del modelo y definición clara del input/output? Puedo ayudarte a ajustar el modelo para eso.
