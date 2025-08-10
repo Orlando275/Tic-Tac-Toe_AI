@@ -90,12 +90,14 @@ class TrainGame:
 
         if self.logic.check_winner():
             self.label_turn.config(text=f"{symbol} wins!")
+            self.label_instructions.config(text="Press 'G' to continue playing")
             self.game_IA=False
             self.canvas.unbind("<Button-1>")
             self.logic.save_game(result=f"{symbol}_wins")
             return
         elif self.logic.count == 9:
             self.label_turn.config(text="It's a tie!")
+            self.label_instructions.config(text="Press 'G' to continue playing")
             self.game_IA=False
             self.canvas.unbind("<Button-1>")
             self.logic.save_game(result="tie")
@@ -108,7 +110,7 @@ class TrainGame:
             next_symbol = "X" if symbol == "O" else "O"
             self.label_turn.config(text=f"{next_symbol} goes now")
 
-        self.label_instructions.config(text="Press 'G' to continue playing")
+        
 
     def move_IA(self,row,col):
         symbol = self.logic.symbol
