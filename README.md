@@ -13,6 +13,40 @@ This project is designed to showcase **game logic implementation**, **data persi
 
 ---
 
+## 📥 Installation & Setup
+
+### Clone this repository
+```bash
+git clone https://github.com/Orlando275/Tic-Tac-Toe_AI
+```
+
+### Activate virtual enviroment python 
+```bash
+# On Linux / Mac
+source venv/bin/activate
+# On Windows (PowerShell)
+venv\Scripts\Activate.ps1
+```
+
+### Start playing
+```bash
+cd game
+python -m game.play_tic_tac_toe
+```
+
+---
+
+## 🐳 Docker Image
+
+You can pull and run the latest version of the TicTacToe AI from Docker Hub:
+
+```bash
+docker pull orlando2705/tictactoeai:version2.0
+docker run -it --rm orlando2705/tictactoeai:version2.0
+```
+
+---
+
 ## ✨ Features
 - 👫 **PvP Mode** – Play with a friend on the same machine.
 - 💾 **Match History Saving** – Every game is stored for future analysis and training.
