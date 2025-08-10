@@ -1,4 +1,5 @@
 import tkinter as tk
+import os
 import torch
 from utils import paths
 from game.logic import GameLogic
@@ -6,7 +7,7 @@ from model.model import modelGame
 
 class TrainGame:
     def __init__(self):
-        
+        self.game_IA=False
         self.logic = GameLogic()
         self.window = tk.Tk()
         self.window.title("Game Tic-Tac-Toe")
@@ -39,7 +40,11 @@ class TrainGame:
         }
 
         #get relative path
-        self.path_model=paths.get_model_path()
+        self.path_model = paths.get_model_path()
+        if not os.path.exists(self.path_model):
+            self.label_instructions.config(text="Model not found. Train it first.")
+            self.game_IA = False
+            return
 
         #load model from file
         self.model=modelGame()
@@ -58,6 +63,7 @@ class TrainGame:
 
     def reset_game(self, event=None):
         self.logic.reset()
+        self.game_IA = False
         self.canvas.delete("all")
         self.draw_board()
         self.label_turn.config(text="X goes now")
@@ -68,8 +74,8 @@ class TrainGame:
         self.window.bind("<a>",self.gameStartAI)
 
     def click_box(self, event):
-        self.canvas.unbind("<A>")
-        self.canvas.unbind("<a>")
+        self.window.unbind("<A>")
+        self.window.unbind("<a>")
 
         row = int(event.y / 200)
         col = int(event.x / 200)
