@@ -47,14 +47,20 @@ Tic-Tac-Toe_AI/
 ---
 
 ## 🖼️ Screenshots
-- **Game in progress** (two players making moves)
-- **Game end screen** (winner display)
-- **Terminal output** (match save confirmation)
-- **AI training output** (showing improvement over time)
+
+### Game in progress
+![Game in progress](https://github.com/user-attachments/assets/8328278b-aadf-4180-bfe7-40198af31f34)
+
+### Game end screen
+![Game end screen](https://github.com/user-attachments/assets/e291aed6-b898-4ec7-becd-a5bccb8e4610)
+
+### AI training output
+![AI training output](https://github.com/user-attachments/assets/4f65e74b-eb56-4688-981a-85f42d4b03f3)
 
 ---
 
 ## 🎯 How It Works
+
 - **Game Execution**: The game launches from `main.py` and prompts for Player 1 and Player 2 moves.
 - **Data Storage**: Every move and match result is saved in `/data` as a structured file for training.
 - **AI Training**: The AI reads past games and adjusts its decision-making algorithm accordingly.
