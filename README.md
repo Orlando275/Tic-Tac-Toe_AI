@@ -97,8 +97,8 @@ Tic-Tac-Toe_AI/
 
 - **Game Execution**: The game launches from `main.py` and prompts for Player 1 and Player 2 moves.
 - **Data Storage**: Every move and match result is saved in `/data` as a structured file for training.
-- **AI Training**: The AI reads past games and adjusts its decision-making algorithm accordingly.
-- **Replay Analysis**: Past games can be reviewed to understand AI strategy changes.
+- **AI Training**: The saved game moves are used to train the AI, improving its decision-making abilities.
+- **Real-Time Inference**: The game uses a previously trained model to make predictions and play in real time.
 
 ## 🛠 Technologies Used
 - Python 3
