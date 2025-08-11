@@ -41,8 +41,8 @@ python -m game.play_tic_tac_toe
 You can pull and run the latest version of the TicTacToe AI from Docker Hub:
 
 ```bash
-docker pull orlando2705/tictactoeai:version2.0
-docker run -it --rm orlando2705/tictactoeai:version2.0
+docker pull orlando2705/tictactoeai:latest
+docker run -it --rm orlando2705/tictactoeai:latest
 ```
 
 ---
